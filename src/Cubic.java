@@ -5,9 +5,10 @@ public class Cubic {
             {"G", "C", "W"},
             {"G", "B", "B"}};
 
+    private Scanner sc = new Scanner(System.in);
+    private String[] str = sc.nextLine().split(" ");
+
     Cubic() {
-        Scanner sc = new Scanner(System.in);
-        String[] str = sc.nextLine().split(" ");
 
         for (int i = 0; i < str.length; i++) {
             if (str[i].equals("U")) {
@@ -17,6 +18,7 @@ public class Cubic {
                 cube[0][1] = up.substring(1, 2);
                 cube[0][2] = up.substring(2, 3);
             }
+            System.out.println(str[i]);
             printArray();
         }
     }
@@ -28,6 +30,7 @@ public class Cubic {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
