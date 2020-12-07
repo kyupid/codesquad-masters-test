@@ -8,20 +8,86 @@ public class Cubic {
     private Scanner sc = new Scanner(System.in);
     private String[] str = sc.nextLine().split(" ");
 
-    Cubic() {
+    private String s;
 
+
+    Cubic() {
+        mix();
+    }
+
+    private void mix() {
         for (int i = 0; i < str.length; i++) {
             if (str[i].equals("U")) {
-                String up = cube[0][0] + cube[0][1] + cube[0][2];
-                up = up.substring(1) + up.substring(0, 1);
-                cube[0][0] = up.substring(0, 1);
-                cube[0][1] = up.substring(1, 2);
-                cube[0][2] = up.substring(2, 3);
+                s = cube[0][0] + cube[0][1] + cube[0][2];
+                s = s.substring(1) + s.substring(0, 1);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
             }
+
+            if (str[i].equals("U'")) {
+                s = cube[0][0] + cube[0][1] + cube[0][2];
+                s = s.substring(2) + s.substring(0, 2); // 결과물
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+
+            }
+
+            if (str[i].equals("R")) {
+                s = cube[0][2] + cube[1][1] + cube[2][2];
+                s = s.substring(1) + s.substring(0, 1);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+            if (str[i].equals("R'")) {
+                s = cube[0][2] + cube[1][1] + cube[2][2];
+                s = s.substring(2) + s.substring(0, 2);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+            if (str[i].equals("L")) {
+                s = cube[0][0] + cube[1][0] + cube[2][0];
+                s = s.substring(2) + s.substring(0, 2);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+            if (str[i].equals("L'")) {
+                s = cube[0][0] + cube[1][0] + cube[2][0];
+                s = s.substring(1) + s.substring(0, 1);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+            if (str[i].equals("B")) {
+                s = cube[2][0] + cube[2][1] + cube[2][2];
+                s = s.substring(2) + s.substring(0, 2);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+            if (str[i].equals("B'")) {
+                s = cube[2][0] + cube[2][1] + cube[2][2];
+                s = s.substring(1) + s.substring(0, 1);
+                cube[0][0] = s.substring(0, 1);
+                cube[0][1] = s.substring(1, 2);
+                cube[0][2] = s.substring(2, 3);
+            }
+
+
             System.out.println(str[i]);
             printArray();
         }
     }
+
 
     private void printArray() {
         for (int i = 0; i < cube.length; i++) {
@@ -34,6 +100,7 @@ public class Cubic {
     }
 
     public static void main(String[] args) {
+        System.out.print("CUBE >> ");
         new Cubic();
     }
 }
