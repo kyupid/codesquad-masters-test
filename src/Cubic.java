@@ -85,6 +85,10 @@ public class Cubic {
                 cube[2][1] = s.substring(1, 2);
                 cube[2][2] = s.substring(2, 3);
             }
+
+            if (str[i].equals("Q")) {
+                System.exit(0);
+            }
             System.out.println(str[i]);
             printArray();
         }
