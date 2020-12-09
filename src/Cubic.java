@@ -12,6 +12,7 @@ public class Cubic {
 
 
     Cubic() {
+        printArray();
         while (true) {
             System.out.print("CUBE >> ");
             str = sc.nextLine().split(" ");
@@ -87,6 +88,7 @@ public class Cubic {
             }
 
             if (str[i].equals("Q")) {
+                System.out.println("Bye~");
                 System.exit(0);
             }
             System.out.println(str[i]);
