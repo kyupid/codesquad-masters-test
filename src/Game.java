@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Game {
 
     String[][] up = {{"W", "W", "W"}, {"W", "W", "W"}, {"W", "W", "W"}};
@@ -7,9 +9,15 @@ class Game {
     String[][] back = {{"B", "B", "B"}, {"B", "B", "B"}, {"B", "B", "B"}};
     String[][] down = {{"Y", "Y", "Y"}, {"Y", "Y", "Y"}, {"Y", "Y", "Y"}};
 
+    Scanner sc = new Scanner(System.in);
+
     void run() {
         printAllLine();
+        getFaceAndDirection();
+    }
 
+    private void getFaceAndDirection() {
+        String[] str = sc.nextLine().split(" ");
     }
 
 ///////////////////////////Print all part of the cube///////////////////////////////
