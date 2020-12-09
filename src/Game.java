@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 class Game {
 
-    String[][] up = {{"W", "W", "W"}, {"W", "W", "W"}, {"W", "W", "W"}};
-    String[][] left = {{"O", "O", "O"}, {"O", "O", "O"}, {"O", "O", "O"}};
-    String[][] front = {{"G", "G", "G"}, {"G", "G", "G"}, {"G", "G", "G"}};
-    String[][] right = {{"R", "R", "R"}, {"R", "R", "R"}, {"R", "R", "R"}};
-    String[][] back = {{"B", "B", "B"}, {"B", "B", "B"}, {"B", "B", "B"}};
-    String[][] down = {{"Y", "Y", "Y"}, {"Y", "Y", "Y"}, {"Y", "Y", "Y"}};
+    String[][] arr_up = {{"W", "W", "W"}, {"W", "W", "W"}, {"W", "W", "W"}};
+    String[][] arr_left = {{"O", "O", "O"}, {"O", "O", "O"}, {"O", "O", "O"}};
+    String[][] arr_front = {{"G", "G", "G"}, {"G", "G", "G"}, {"G", "G", "G"}};
+    String[][] arr_right = {{"R", "R", "R"}, {"R", "R", "R"}, {"R", "R", "R"}};
+    String[][] arr_back = {{"B", "B", "B"}, {"B", "B", "B"}, {"B", "B", "B"}};
+    String[][] arr_down = {{"Y", "Y", "Y"}, {"Y", "Y", "Y"}, {"Y", "Y", "Y"}};
+
+    String up, left, front, right, back, down;
 
     Scanner sc = new Scanner(System.in);
 
@@ -23,11 +25,11 @@ class Game {
 
 ///////////////////////////Print all part of the cube///////////////////////////////
     private void printAllLine() {
-        printUpDown(up);
+        printUpDown(arr_up);
         printMiddleOneLine(0);
         printMiddleOneLine(1);
         printMiddleOneLine(2);
-        printUpDown(down);
+        printUpDown(arr_down);
     }
 
     private void printMiddlePartLine(int num, String[][] test) {
@@ -39,10 +41,10 @@ class Game {
 
 
     private void printMiddleOneLine(int i) {
-        printMiddlePartLine(i, left);
-        printMiddlePartLine(i, front);
-        printMiddlePartLine(i, right);
-        printMiddlePartLine(i, back);
+        printMiddlePartLine(i, arr_left);
+        printMiddlePartLine(i, arr_front);
+        printMiddlePartLine(i, arr_right);
+        printMiddlePartLine(i, arr_back);
         System.out.println();
     }
 
