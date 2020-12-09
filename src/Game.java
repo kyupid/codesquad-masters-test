@@ -13,11 +13,12 @@ class Game {
 
     void run() {
         printAllLine();
-        getFaceAndDirection();
+        turnCube();
     }
 
-    private void getFaceAndDirection() {
+    private void turnCube() {
         String[] str = sc.nextLine().split(" ");
+
     }
 
 ///////////////////////////Print all part of the cube///////////////////////////////
