@@ -60,8 +60,14 @@ class Game {
             if (e.equals("D'")) {
                 DR();
             }
+            if (e.equals("Q")) {
+                System.out.println("Bye~");
+                System.exit(0);
+            }
+            System.out.println(e);
+            printAllLine();
         }
-        printAllLine();
+
     }
     private void DR() {
         array[0] = arr_left[2][0];
@@ -463,6 +469,8 @@ class Game {
         arr_down[0][0] = array[8];
         arr_down[0][1] = array[7];
         arr_down[0][2] = array[6];
+
+
 
     }
 
